@@ -55,7 +55,7 @@ if img_file_buffer is not None:
     prediction = model.predict(data)
     print(prediction)
     if prediction[0][0]>0.8:
-      st.header('Abriendo')
+      st.header('radio')
       client1.publish("ValsArt","{'gesto': 'abierto'}",qos=0, retain=False)
       time.sleep(0.2)
     if prediction[0][1]>0.5:
